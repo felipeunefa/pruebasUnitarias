@@ -7,38 +7,35 @@ from odoo.tests import common
 
 
 class SampleTest(common.TransactionCase):
-    def test_some_action(self):
-        self.employee = self.env['library.books']
 
-        # create an employee record
-        self.employee1 = self.employee.create({
+    def test_some_action(self):
+        books = self.env['library.books']
+        author = self.env['library.author']
+        category = self.env['library.category']
+
+        books1 = books.create({
             'name': 'Las casas muertas',
             'date_register': '1990-04-18',
-            'author_name': '2',
+            'author_name': '1',
             'category': '1'
         })
 
-        self.employee2 = self.employee.create({
+        books2 = books.create({
             'name': 'no es tu peo',
             'date_register': '1990-04-19',
             'author_name': '1',
             'category': '1'
         })
 
-        #self.assertEqual(self.employee1.author_name, '2,')
-        #self.assertEqual(self.employee2.date_register, '1990-04-19')
+        
+        
+        rsa = author.search([('author_name', '=', 'Jesus')])
+        rsc = category.search([('name', '=', 'Fiction')])
 
-    # def test_compute_employee_designation(self):
-
-    #     self.assertEqual(self.employee1.author_name, 2)
-
-    #     # check position of the employee2
-    #     self.assertEqual(self.employee2.date_register, '1990-04-19')
-
-    #     # change the experience of employee2
-    #     self.employee2.write({
-    #     'name': 'Las casas muertas',
-    #     })
-
-    #     # again check the position of employee
-    #     self.assertEqual(self.employee2.category, '1')
+        a = self.assertEqual(books1.name, 'Las casas muertas')
+        b = self.assertEqual(books2.author_name, rsa)
+        self.assertEqual(books1.category, rsc)
+        
+        print('\n\t\t\t==================================================')
+        print('\n\t\t\t========== [ Test realizado con exito ] ==========')
+        print('\n\t\t\t==================================================')
