@@ -9,8 +9,3 @@ class LibraryCategory(models.Model):
     name = fields.Char(string='Book Category', required=True)
     date_register = fields.Date()
     active = fields.Boolean('Active?', default=True)
-
-    @api.multi
-    def add_record(self):
-    	md = None
-    	md = self.create()
