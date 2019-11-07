@@ -41,10 +41,11 @@ class TestAuthor(common.TransactionCase):
         f1.author_name = 'Pitagoras'
         so1 = f1.save()
 
-        with Form(so) as f2:
-            f2.author_name = f1.id
+        # with Form(so) as f2:
+        #     f2.author_name = f1.id
 
-        print(so.author_name)
+        print(so)
+        print(so1)
 
 
 
