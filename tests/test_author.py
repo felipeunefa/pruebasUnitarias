@@ -13,7 +13,7 @@ class TestAuthor(common.TransactionCase):
         new_category = category.create({ 'name': 'sciences', 'date_register': '1990-04-18'})
 
         #create a new author
-        new_author = category.create({ 'author_name': 'William Bateson', 'date_register': '2019-11-06'})
+        new_author = author.create({ 'author_name': 'William Bateson', 'date_register': '2019-11-06'})
 
 
         books1 = books.create({
@@ -24,9 +24,28 @@ class TestAuthor(common.TransactionCase):
             })
 
 
-        f = Form(books)
+        # f = Form(books)
 
-        print(f)
+
+        # with f.new() as line:
+        #     line.name = 'jesus'
+        # rs = f.save()
+
+        # print(rs)
+
+        f = Form(books)
+        f.name = 'Geometria'
+        so = f.save()
+
+        f1 = Form(author)
+        f1.author_name = 'Pitagoras'
+        so1 = f1.save()
+
+        with Form(so) as f2:
+            f2.author_name = f1.id
+
+        print(so.author_name)
+
 
 
 #        rsa = author.search([('author_name', '=', 'Jesus')])
