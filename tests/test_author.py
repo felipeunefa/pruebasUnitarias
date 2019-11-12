@@ -23,16 +23,6 @@ class TestAuthor(common.TransactionCase):
             'category': new_category.id
             })
 
-
-        # f = Form(books)
-
-
-        # with f.new() as line:
-        #     line.name = 'jesus'
-        # rs = f.save()
-
-        # print(rs)
-
         f = Form(books)
         f.name = 'Geometria'
         so = f.save()
@@ -41,40 +31,9 @@ class TestAuthor(common.TransactionCase):
         f1.author_name = 'Pitagoras'
         so1 = f1.save()
 
-        # with Form(so) as f2:
-        #     f2.author_name = f1.id
+        with Form(so1) as f2:
+            f2.author_name = f1.id
 
-        print(so)
-        print(so1)
-
-
-
-#        rsa = author.search([('author_name', '=', 'Jesus')])
-
-
-        #f.name_author = self.env.ref(author)
-        #so = f.save()
-
-
-        #f.id = a_partner
-        #so = f.save()
-
-        
-        # books2 = books.create({
-        #     'name': 'no es tu peo',
-        #     'date_register': '1990-04-19',
-        #     'author_name': '1',
-        #     'category': '1'
-        # })
-
-        
-        
-        # rsa = author.search([('author_name', '=', 'Jesus')])
-        # rsc = category.search([('name', '=', 'Fiction')])
-
-        # a = self.assertEqual(books1.name, 'Las casas muertas')
-        # b = self.assertEqual(books2.author_name, rsa)
-        # self.assertEqual(books1.category, rsc)
 
         print('\n\t\t\t====================================================')
         print('\n\t\t\t========== [ Test 2 realizado con exito ] ==========')
