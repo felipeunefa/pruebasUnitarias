@@ -1,0 +1,29 @@
+<?xml version="1.0"?> 
+<odoo> 
+  <record id="view_form_library_author" model="ir.ui.view"> 
+    <field name="name">Authors Information Form</field> 
+    <field name="model">library.author</field> 
+    <field name="arch" type="xml"> 
+      <form string="To-do Task"> 
+        <sheet> 
+          <group name="group_top"> 
+            <group name="group_left">
+              <field name="author_name"/>
+              <field name="date_register"/>
+            </group> 
+          </group>
+        </sheet>
+      </form>
+    </field> 
+  </record> 
+  <record id="view_tree_library_author" model="ir.ui.view"> 
+    <field name="name">Author Tree</field> 
+    <field name="model">library.author</field> 
+    <field name="arch" type="xml"> 
+      <tree colors="decoration-muted:is_done==True"> 
+        <field name="author_name"/> 
+        <field name="date_register"/> 
+      </tree> 
+    </field> 
+  </record>
+</odoo>

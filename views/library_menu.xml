@@ -1,0 +1,9 @@
+<?xml version="1.0"?> 
+<odoo>
+  <act_window id="action_library_book" name="Library Books" res_model="library.books" view_mode="tree,form" /> 
+  <menuitem id="menu_library_book" name="Books" action="action_library_book" />
+  <act_window id="action_library_author" name="Author Books" res_model="library.author" view_mode="tree,form" /> 
+  <menuitem id="menu_library_author" name="Author" action="action_library_author" />
+</odoo>
+
+
