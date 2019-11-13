@@ -25,7 +25,7 @@ class TestAll(TransactionCase):
             'date_register': '1990-04-18',
             'author_name': self.new_author.id,
             'category': self.new_category.id,
-            'active': False
+            'active': True
             })
 
 
