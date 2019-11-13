@@ -1,0 +1,29 @@
+<!-- <odoo>
+    <data>
+       <record id="object0" model="library.author"> 
+         <field name="author_name">Object 0</field> 
+         <field name="date_register">2010-02-10</field> 
+       </record> 
+      
+       <record id="object1" model="library.author"> 
+         <field name="author_name">Object 1</field> 
+         <field name="date_register">2010-02-11</field> 
+       </record> 
+      
+       <record id="object2" model="library.author"> 
+         <field name="author_name">Object 2</field> 
+         <field name="date_register">2010-02-12</field> 
+       </record> 
+      
+       <record id="object3" model="library.author"> 
+         <field name="author_name">Object 3</field> 
+         <field name="date_register">2010-02-13</field>  
+       </record> 
+      
+       <record id="object4" model="library.author"> 
+         <field name="author_name">Object 4</field> 
+         <field name="date_register">2010-02-14</field>  
+       </record> 
+
+    </data>
+</odoo> -->
