@@ -3,6 +3,7 @@
 
 #from datetime import datetime
 from odoo.tests.common import TransactionCase
+import datetime
 
 class TestAll(TransactionCase):
 
@@ -54,13 +55,13 @@ class TestAll(TransactionCase):
 
     def test_one_create_relationship(self):
 
-        #d = (1887,5,7)
+        d = datetime.date(1887,5,7)
 
         try:
             self.assertEqual(self.books1.name, 'Mendels Principles of Heredity')
             self.assertEqual(self.books2.author_name.id, self.new_author.id)
             self.assertEqual(self.books3.category.id, self.new_category.id)
-            #self.assertEqual(self.books4.date_register, d)
+            self.assertEqual(self.books4.date_register, d)
             self.assertEqual(self.books1.active, False)
             
         except AssertionError:
